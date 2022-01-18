@@ -85,8 +85,8 @@
                 <configuration>
                     <systemPropertyVariables>
                         <property>
-                            <name>browser</name>
-                            <value>${browser}</value>
+                            <name>browserParameter</name>
+                            <value>${browserParameter}</value>
                         </property>
                     </systemPropertyVariables>
                     <suiteXmlFiles>

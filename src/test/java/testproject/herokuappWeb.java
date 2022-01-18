@@ -14,7 +14,6 @@ public class herokuappWeb extends TestUtilities {
         OpenTabs.execute(numberOfTabs);
         CloseEmptyTabs.execute(numberOfTabs);
         switchTab(driver, log, 0);
-        System.out.println(System.getProperty("browser"));
     }
     @Test
     @Parameters("searchText")
@@ -61,5 +60,6 @@ public class herokuappWeb extends TestUtilities {
         PrintNameUser.execute();
         PrintViewProfileText.execute();
         ClickViewProfile.execute();
+        System.out.println(System.getProperty("browserParameter"));
     }
 }
