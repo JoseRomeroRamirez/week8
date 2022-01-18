@@ -9,6 +9,7 @@ public class berryAPI extends BasePageObject{
     public void getBerryFirmess(String pokeAPIurl, String schemaBerry, String firmess)  throws JsonProcessingException {
         berryPOJO berry = new berryPOJO();
         String response = getResponse(pokeAPIurl);
+        System.out.println(schemaBerry);
         schemaValidator(pokeAPIurl, schemaBerry);
         int count = getFromResponseInt(response,"count");
         for (int i = 0; i < count; i++) {
