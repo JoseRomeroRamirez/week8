@@ -23,7 +23,7 @@ public class BaseTest {
         String testName = ctx.getCurrentXmlTest().getName();
         log = LogManager.getLogger(testName);
         //Here the browser is passed to BrowserDriverFactor class
-        BrowserDriverFactory factory = new BrowserDriverFactory(System.getProperty("browser"));
+        BrowserDriverFactory factory = new BrowserDriverFactory(browser);
         //Create driver
         driver = factory.createDriver();
         driver.manage().window().maximize();

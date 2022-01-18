@@ -25,6 +25,7 @@ public class herokuappWeb extends TestUtilities {
     public void ScrollWebElementTest(){
         ScrollWebElement ScrollWebElement = new ScrollWebElement(driver, log);
         ScrollWebElement.execute();
+        System.out.println(System.getProperty("browser"));
     }
     @Test
     public void PrintNameUserTest(){
