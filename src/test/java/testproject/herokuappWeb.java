@@ -14,6 +14,7 @@ public class herokuappWeb extends TestUtilities {
         OpenTabs.execute(numberOfTabs);
         CloseEmptyTabs.execute(numberOfTabs);
         switchTab(driver, log, 0);
+        System.out.println(System.getProperty("browser"));
     }
     @Test
     @Parameters("searchText")
@@ -25,7 +26,6 @@ public class herokuappWeb extends TestUtilities {
     public void ScrollWebElementTest(){
         ScrollWebElement ScrollWebElement = new ScrollWebElement(driver, log);
         ScrollWebElement.execute();
-        System.out.println(System.getProperty("browser"));
     }
     @Test
     public void PrintNameUserTest(){
