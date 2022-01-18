@@ -84,10 +84,10 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <property>
-                            <name>browserParameter</name>
-                            <value>${browserParameter}</value>
-                        </property>
+
+
+                            <browserParameter>${browserParameter}</browserParameter>
+
                     </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>${xmlSuiteFileName}</suiteXmlFile>
