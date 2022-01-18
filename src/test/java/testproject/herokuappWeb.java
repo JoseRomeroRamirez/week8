@@ -60,6 +60,5 @@ public class herokuappWeb extends TestUtilities {
         PrintNameUser.execute();
         PrintViewProfileText.execute();
         ClickViewProfile.execute();
-        System.out.println(System.getProperty("browserParameter"));
     }
 }
