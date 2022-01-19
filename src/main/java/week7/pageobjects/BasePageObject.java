@@ -27,7 +27,7 @@ public class BasePageObject {
     }
     // this method validate the schema of a json
     public void schemaValidator(String url, String schema){
-        given().get(url).then().assertThat().body(matchesJsonSchema(schema)).statusCode(200);
+        given().get(url).then().assertThat().body(matchesJsonSchemaInClasspath(schema)).statusCode(200);
     }
     //This method return specific data from a json as a string, given response and get
     public String getFromResponse(String response, String get){
