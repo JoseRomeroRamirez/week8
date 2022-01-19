@@ -2,6 +2,7 @@ package week4.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserDriverFactory {
@@ -18,14 +19,19 @@ public class BrowserDriverFactory {
     //This method sets the driver
     public WebDriver createDriver() {
         //Create browser
-        //set Chrome Driver
+        //set chrome Driver
         if ("chrome".equals(browser)) {
             System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
             driver.set(new ChromeDriver());
+            //set firefox Driver
         } else if ("firefox".equals(browser)) {
             System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
             driver.set(new FirefoxDriver());
-        } else {
+            //set edge Driver
+        } else if ("edge".equals(browser)){
+            System.setProperty("webdriver.edge.driver", "src/main/resources/msedgedriver.exe");
+            driver.set(new EdgeDriver());
+        }else {
             System.out.println("Do not know how to start:" + browser + ", starting Chrome.");
             System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
             driver.set(new ChromeDriver());
